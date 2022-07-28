@@ -12,6 +12,7 @@
         <p class="date">
             Published {{ post.publish }} by {{ post.author }}
         </p>
+        <img src="{{ post.image }}">
         {{ post.body|truncatewords:30|linebreaks }}
     {% endfor %}
 {% endblock %}

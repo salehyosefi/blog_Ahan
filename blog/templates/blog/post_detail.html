@@ -6,6 +6,8 @@
     <p class="date">
         Published {{ post.publish }} by {{ post.author }}
     </p>
+
+    {{ post.image }}
     {{ post.body|linebreaks }}
-    
+
 {% endblock %}
