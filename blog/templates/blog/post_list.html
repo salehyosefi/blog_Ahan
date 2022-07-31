@@ -12,7 +12,12 @@
         <p class="date">
             Published {{ post.publish }} by {{ post.author }}
         </p>
+        {% if post.image %}
         <img src="{{ post.image.url }}">
+        {% endif %}
         {{ post.body|truncatewords:30|linebreaks }}
     {% endfor %}
+
+    {% include "blog/pagination.html" with page=posts %}
+
 {% endblock %}
