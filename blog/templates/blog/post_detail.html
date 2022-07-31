@@ -7,7 +7,7 @@
         Published {{ post.publish }} by {{ post.author }}
     </p>
 
-    {{ post.image }}
+    <img src="{{ post.image.url }}">
     {{ post.body|linebreaks }}
 
 {% endblock %}
