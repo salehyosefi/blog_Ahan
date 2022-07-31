@@ -1,9 +1,7 @@
 {% extends "blog/layout.html" %}
-{% block title %}Djangocenter Blog List{% endblock %}
+{% block title %}سایت آهن آلات{% endblock %}
 
 {% block content %}
-    <h1>My Blog</h1>
-
     <style>
     body {
         font-family: "Roboto", sans-serif;
@@ -23,7 +21,7 @@
         <div class="row">
             <div class=" col-md-8 col-md-10 mx-auto">
                 <div class="site-heading">
-                    <h3 class=" site-heading my-4 mt-3 text-white"> Welcome to my awesome Blog </h3>
+                    <h3 class=" site-heading my-4 mt-3 text-white"> به سایت ما خوش آمدید</h3>
                     <p class="text-light">We Love Django As much as you do..! &nbsp
                     </p>
                 </div>
@@ -41,11 +39,10 @@
                 <div class="card-body">
                     <h2 class="card-title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
                     <p class="card-text text-muted h6">{{ post.author }} | {{ post.publish }} </p>
-                    <p class="card-text">
-                        {% if post.image %}
-                        <img src="{{ post.image.url }}">
-                        {% endif %}
-                        {{post.body|slice:":200" }}</p>
+                    {% if post.image %}
+                    <img src="{{ post.image.url }}" class="card-img-top" alt="...">
+                    {% endif %}
+                    <p class="card-text">{{post.body|slice:":200" }}</p>
                     <a href="{% url 'blog:post_detail' post.slug %}" class="btn btn-primary">Read More &rarr;</a>
                 </div>
             </div>
