@@ -7,6 +7,7 @@
 - [MySQL](https://www.mysql.com/) - Database
 - [Git](https://git-scm.com/doc) - Version Control System
 - [HTML5](https://www.w3.org/html/) - fundamental markup language
+- [CSS](https://www.w3.org/Style/CSS/Overview.en.html) - Cascading Style Sheets
 
 
 ## Setup
